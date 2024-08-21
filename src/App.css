@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-background-color: #b48f8f;
+    --catalog-background-color: #b65537;
+    --general-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --card-principal-color: #444;
+    --principal-font-color: #eee;
+}
+
+body {
+    background-color: var(--main-background-color);
+    color: var(--principal-font-color);
+    font-family: var(--general-font);
+}
+
+button{
+    font-family: var(--general-font);
+    padding: 0.5em 1em ;
+}
+
+
+img {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+#catalog {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin: auto auto;
+    padding: 2em;
+    border: 2px solid #fff;
+    gap: 1em;
+    background-color: var(--catalog-background-color);
+}
+
+.card-item {
+    width: 100%;
+    margin: auto auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    height: 100%;
+    align-content: center;
+    background-color: #fff;
+    color: var(--card-principal-color);
+}
+
+.card-image {
+    width: 50%;
+}
+
+
+.card-container:hover {
+    transition: all .3s;
+    transform: scale(1.05);
+}
+
+.card-button-area button {
+    width: 100%;
+}
+
+.purchase-icon {
+    width: 40px;
+    background-color: var(--principal-font-color);
+    border-radius: 100%;
+    padding: 5px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9em;
+    padding: 1em;
+    border: 2px solid var(--principal-font-color);
+    margin-bottom: 1em;
+}
+
+.header-login-summary-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.purchase-container {
+    display: flex;
+}
+
+#login-form {
+    display: flex;    
+    flex-direction: column;
+}
