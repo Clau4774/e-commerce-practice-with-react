@@ -1,18 +1,27 @@
+import Button from "../button/Button";
+
 function Card({product}) {
 
   const addToCart = () => {
-    console.log(product.price)
+    console.log(price)
   }
+
+  const seeProductBtnInfo = "See this product";
+  const btnClassName = "green";
+
+  const addCartInfo = "Add to Cart"
+
+  const {price, title, image} = product;
 
   return (
     <li className="card-item">
         <div className="card-container">
-            <img className="card-image" src={product.image} />
-            <p>{product.title}</p>
-            <p>${product.price}</p>
+            <img className="card-image" src={image} alt="" />
+            <p>{title}</p>
+            <p>${price}</p>
             <div className="card-button-area">
-              <button>See this product</button>
-              <button onClick={addToCart}>Add to Cart</button>
+              <Button information={seeProductBtnInfo}/>
+              <Button information={addCartInfo} buttonClass={btnClassName}/>
             </div>
         </div>
     </li>

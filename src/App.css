@@ -20,6 +20,7 @@ body {
 
 button{
     font-family: var(--general-font);
+    color: var(--card-principal-color);
     padding: 0.5em 1em ;
 }
 
@@ -31,6 +32,42 @@ img {
 li {
     list-style: none;
 }
+
+
+/* Header Area */
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9em;
+    padding: 1em;
+    border: 2px solid var(--principal-font-color);
+    margin-bottom: 1em;
+}
+
+.header-login-summary-section {
+    display: flex;
+    justify-content: space-between;
+}
+/*Header Purchase*/
+.purchase-container {
+    display: flex;
+}
+
+.purchase-icon {
+    width: 40px;
+    background-color: var(--principal-font-color);
+    border-radius: 100%;
+    padding: 5px;
+}
+
+/*Header login*/
+#login-form {
+    display: flex;    
+    flex-direction: column;
+}
+
+/*Main Home Area*/
 
 #catalog {
     width: 80%;
@@ -44,12 +81,12 @@ li {
     background-color: var(--catalog-background-color);
 }
 
+
+/*Card*/
 .card-item {
     width: 100%;
-    margin: auto auto;
     padding: 1em;
     border: 1px solid #ccc;
-    height: 100%;
     align-content: center;
     background-color: #fff;
     color: var(--card-principal-color);
@@ -69,33 +106,40 @@ li {
     width: 100%;
 }
 
-.purchase-icon {
-    width: 40px;
-    background-color: var(--principal-font-color);
-    border-radius: 100%;
-    padding: 5px;
+/*Footer Area*/
+
+.footer-container {
+    padding: 2em;
+    border: 2px solid var(--principal-font-color)
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 9em;
-    padding: 1em;
-    border: 2px solid var(--principal-font-color);
-    margin-bottom: 1em;
+/*Media Querys*/
+
+@media (max-width: 430px) {
+
+    .header-container {
+        font-size: .55rem;
+    }
+
+    #catalog {
+        width: 80%;
+        grid-template-columns: 1fr;
+    }
 }
 
-.header-login-summary-section {
-    display: flex;
-    justify-content: space-between;
+@media (max-width: 838px) {
+    
+    .header-container {
+        font-size: 1rem;
+    }
+
+    #catalog {
+        width: 80%;
+        grid-template-columns: 2fr;
+    }
 }
 
-.purchase-container {
-    display: flex;
-}
-
-#login-form {
-    display: flex;    
-    flex-direction: column;
+.green {
+    background-color: green;
+    color: #fff;
 }
